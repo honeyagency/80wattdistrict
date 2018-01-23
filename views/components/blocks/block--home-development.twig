@@ -1,0 +1,6 @@
+<div class="block--home-development grid--one grid--sm-half nog font--large spacing--vert-3" {% if home.development.image %}style="background-image:url('{{home.development.image}}')"{% endif %}>
+		<h2>{{home.development.title}}</h2>
+		{% for development in home.development.developments %}
+			<p>{{development.title}} <a href="{{development.permalink}}" class="color--black underline">read more.</a></p>
+		{% endfor %}
+</div>

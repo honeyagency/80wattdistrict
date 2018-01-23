@@ -1,0 +1,5 @@
+<div class="block--header-social">
+	{% if options.social.instagram %}<a href="{{options.social.instagram.url}}" title="{{options.social.instagram.title}}" target="{{options.social.instagram.target}}"><i class="icon-social--instagram" data-grunticon-embed></i></a>{% endif %}
+	{% if options.social.facebook %}<a href="{{options.social.facebook.url}}" title="{{options.social.facebook.title}}" target="{{options.social.facebook.target}}"><i class="icon-social--facebook" data-grunticon-embed></i></a>{% endif %}
+	<a href="" class="toggle-search" id="toggleSearch"><i class="icon-social--search" data-grunticon-embed></i></a>{% include 'components/sections/section--search.twig' %}
+</div>

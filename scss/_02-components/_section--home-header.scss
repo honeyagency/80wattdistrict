@@ -1,0 +1,25 @@
+.section--home-header {
+    @include media($max-sm) {
+        .block--text {
+            text-align: left !important;
+        }
+    }
+
+
+    overflow: hidden;
+
+    .icon-map {
+        @include media($max-sm) {
+            position: relative;
+            display: block;
+            width: 120vw;
+            left: -20vw;
+            top: -4.5em;
+            margin-bottom: -6.5em;
+
+            .eac0a083-6d18-4da0-9a31-522cc9abd448 {
+                display: none;
+            }
+        }
+    }
+}

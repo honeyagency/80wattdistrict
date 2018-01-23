@@ -1,0 +1,44 @@
+.section--home-services {
+    .block--image {
+        position: relative;
+
+        .circle {
+            border-radius: 100%;
+            margin: 0 auto;
+            display: block;
+            z-index: 5;
+            position: relative;
+
+            @include media($max-sm) {
+                width: 75vw;
+                height: 75vw;
+                max-width: 420px;
+                max-height: 420px;
+            }
+
+
+            @include media($screen-sm) {
+                max-width: 100%;
+                height: calc(100% - 1em);
+                width: calc(100% - 1em);
+            }
+        }
+
+        .icon-lines {
+            z-index: 4;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%) scale(0.9);
+            transition: transform 1s $base-cubic;
+
+        }
+
+        &.show {
+            .icon-lines {
+                transition: transform 1s $base-cubic;
+                transform: translateY(-53%) translateX(-54%) scale(1.07);
+            }
+        }
+    }
+}

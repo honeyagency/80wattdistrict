@@ -1,0 +1,28 @@
+.section--home-news {
+    form {
+        input[type="email"] {
+            width: 70%;
+            display: block;
+            margin: 0 auto;
+            padding: 0.7em 1em;
+            margin-bottom: 1em;
+        }
+    }
+
+    .nog {
+        border-bottom: 4px solid $white;
+
+        &:first-of-type {
+            border-right: 2px solid $white;
+        }
+
+        &:last-of-type {
+            border-left: 2px solid $white;
+        }
+    }
+
+    .block--home-development {
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}

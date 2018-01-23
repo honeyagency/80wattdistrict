@@ -1,0 +1,15 @@
+<header class="header max-wrap margin--center spacing--dsk-vert-2 spacing--gutter-mob">
+	{% block header %}
+		<div class="block--logo flex flex--wrap justify--between">
+			<h1 class="mar--no logo"><a class="hdr-logo-link" href="/" rel="home"><i class="icon-logo" data-grunticon-embed></i></a></h1>
+			<label class="menu--trigger hidden--dsk"><span></span></label>
+			<span class="rightside hidden--mob">
+				<i class="icon-tri-plus" data-grunticon-embed></i>
+				<span class="text--right font--tiny text--uppercase">The Watt Avenue District PBID</span>
+			</span>
+		</div>
+
+		{% include 'components/navigation.twig' %}
+		<span class="text--right font--tiny text--uppercase hidden--dsk">The Watt Avenue District PBID</span>
+	{% endblock %}
+</header>

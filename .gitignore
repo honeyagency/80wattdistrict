@@ -16,3 +16,9 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
+/node_modules
+/tests
+/.sass-cache
+.DS_Store
+/config.codekit3
+/vendor

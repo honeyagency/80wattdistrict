@@ -1,0 +1,15 @@
+<section class="section--home-services bg--white spacing--vert-3 spacing--dsk-vert-5">
+	<div class=" spacing--gutter max-wrap margin--center flex flex--wrap justify--around align--items-center">
+		{% if home.services.image %}
+			<div class="spacing--vert-1 block--image grid--one grid--sm-half grid--md-two-fifths">
+				<img class="circle" src="{{home.services.image|resize(840,840)}}" width="420" alt="{{home.services.image.alt}}">
+				<i class="icon-lines circle" data-grunticon-embed></i>
+			</div>
+		{% endif %}
+		<div class="spacing--vert-1 grid--one grid--sm-half text--center">
+			<h2>{{home.services.title}}</h2>
+			<p class="font--large">{{home.services.text}}</p>
+			{% if home.services.link %}<a href="{{home.services.link.url}}" title="{{home.services.link.title}}" target="{{home.services.link.target}}" class="button black">{{home.services.link.title}}</a>{% endif %}
+		</div>
+	</div>
+</section>

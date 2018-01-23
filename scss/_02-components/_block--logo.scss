@@ -1,0 +1,5 @@
+.block--logo {
+    @include media($max-sm) {
+        height: 95px;
+    }
+}

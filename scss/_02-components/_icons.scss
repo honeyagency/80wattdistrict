@@ -1,0 +1,45 @@
+.hdr-logo-link {
+    height: 103px;
+    width: 125px;
+    display: inline-block;
+
+    .icon-logo {
+        width: 125px;
+        height: 103px;
+        display: inline-block;
+
+        svg {
+            width: 100%;
+        }
+    }
+
+    @include media($max-sm) {
+        h1.logo {
+            line-height: 0;
+        }
+
+        height: 70px;
+        width: 85px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        .icon-logo {
+            height: 70px;
+            width: 85px;
+        }
+    }
+}
+
+.icon-tri-plus {
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+
+    svg {
+        width: 100%;
+    }
+
+    &.flip {
+        transform: rotate(90deg);
+    }
+}

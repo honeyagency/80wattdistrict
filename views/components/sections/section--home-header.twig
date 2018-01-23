@@ -1,0 +1,10 @@
+<section class="section--home-header spacing--gutter max-wrap margin--center flex flex--wrap justify--around align--items-center">
+	<div class="block--text grid--one grid--sm-half  text--center">
+		<h2>{{home.header.title}}</h2>
+		<p class="font--large">{{home.header.text}}</p>
+		{% if home.header.link %}<a href="{{home.header.link.url}}" title="{{home.header.link.title}}" target="{{home.header.link.target}}" class="button black">{{home.header.link.title}}</a>{% endif %}
+	</div>
+	<div class="grid--one grid--sm-half grid--md-two-fifths">
+		<i class="icon-map" data-grunticon-embed></i>
+	</div>
+</section>
