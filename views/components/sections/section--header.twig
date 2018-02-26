@@ -1,0 +1,17 @@
+{% if header.images.one %}
+	<section class="section--header flex flex--wrap">
+		{% if header.images.images == 'one' %}
+			<div class="header--image grid--one">
+				<img src="{{header.images.one|resize(360,150)}}" data-original="{{header.images.one|resize(1280, 534)}}" alt="{{header.images.one.caption}}" data-original-set="{{header.images.one|resize(640, 267)}}  640w,{{header.images.one|resize(750, 312)}}  750w,{{header.images.one|resize(1080,450)}} 1080w,{{header.images.one|resize(1280, 534)}} 1280w,{{header.images.one|resize(1360,663)}} 1366w,{{header.images.one|resize(1440,600)}} 1440w,{{header.images.one|resize(1920,800)}} 1920w, {{header.images.one|resize(2880,1200)}} 2880w" sizes="100vw">
+			</div>
+		{% elseif header.images.images == 'two' %}
+			
+			<div class="header--image grid--half">
+				<img src="{{header.images.one|resize(360,300)}}" data-original="{{header.images.one|resize(640, 534)}}" alt="{{header.images.one.caption}}" data-original-set="{{header.images.one|resize(320, 267)}}  320w,{{header.images.one|resize(375, 312)}} 375w,{{header.images.one|resize(540,450)}} 540w,{{header.images.one|resize(640, 534)}} 640w,{{header.images.one|resize(680,663)}} 680w,{{header.images.one|resize(720,600)}} 720w,{{header.images.one|resize(960,800)}} 960w, {{header.images.one|resize(1440,1200)}} 1440w" sizes="50vw">
+			</div>
+			<div class="header--image grid--half">
+				<img src="{{header.images.two|resize(360,300)}}" data-original="{{header.images.two|resize(640, 534)}}" alt="{{header.images.two.caption}}" data-original-set="{{header.images.two|resize(320, 267)}}  320w,{{header.images.two|resize(375, 312)}} 375w,{{header.images.two|resize(540,450)}} 540w,{{header.images.two|resize(640, 534)}} 640w,{{header.images.two|resize(680,663)}} 680w,{{header.images.two|resize(720,600)}} 720w,{{header.images.two|resize(960,800)}} 960w, {{header.images.two|resize(1440,1200)}} 1440w" sizes="50vw">
+			</div>
+		{% endif %}
+	</section>
+{% endif %}

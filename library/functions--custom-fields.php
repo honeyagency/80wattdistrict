@@ -18,10 +18,32 @@ function prepareSiteOptions()
     $default = array(
         'image' => $defaultImage,
     );
+
+    if (have_rows('field_5a9457dbadb82', 'options')) {
+        $links = array();
+        while (have_rows('field_5a9457dbadb82', 'options')) {
+            the_row();
+            $links[] = get_sub_field('field_5a9457e515667', 'options');
+        }
+    }
+    if (have_rows('field_5a945b06f25f0', 'options')) {
+        $sublinks = array();
+        while (have_rows('field_5a945b06f25f0', 'options')) {
+            the_row();
+            $sublinks[] = get_sub_field('field_5a945b1ff25f1', 'options');
+        }
+    }
+    $footer = array(
+        'schedule' => get_field('field_5a94578eadb81', 'options'),
+        'links'    => $links,
+        'address'  => get_field('field_5a94580115668', 'options'),
+        'sublinks' => $sublinks,
+    );
     $options = array(
         'social'  => $social,
         'default' => $default,
         'search'  => $search,
+        'footer'  => $footer,
     );
     return $options;
 }
@@ -69,4 +91,29 @@ function prepareHomepageFields()
         'development' => $development,
     );
     return $home;
+}
+function prepareHeaderFields()
+{
+
+    $imageOneId = get_field('field_5a8c67b1c743c');
+    $imageOne   = null;
+    if (!empty($imageOneId)) {
+        $imageOne = new TimberImage($imageOneId);
+    }
+
+    $imageTwoId = get_field('field_5a8c67ccac34c');
+    $imageTwo   = null;
+    if (!empty($imageTwoId)) {
+        $imageTwo = new TimberImage($imageTwoId);
+    }
+
+    $images = array(
+        'images' => get_field('field_5a8c6788c743b'),
+        'one'    => $imageOne,
+        'two'    => $imageTwo,
+    );
+    $header = array(
+        'images' => $images,
+    );
+    return $header;
 }

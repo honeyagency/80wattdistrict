@@ -26,6 +26,8 @@ $post    = new TimberPost();
 
 if (is_front_page() == true) {
     $context['home'] = prepareHomepageFields();
+} else {
+    $context['header'] = prepareHeaderFields();
 }
 
 $context['post'] = $post;

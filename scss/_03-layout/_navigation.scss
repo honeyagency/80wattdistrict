@@ -1,6 +1,5 @@
 nav {
     border-top: 3px solid;
-    padding-top: .5em;
 
     &.main-navigation {
         ul {
@@ -11,8 +10,33 @@ nav {
             li {
                 display: inline-block;
                 margin: 0;
-                padding: 0;
-                padding-right: $base-font-size;
+
+                a {
+                    display: inline-block;
+                    padding: .5em .75em;
+                    transition: background 0.2s $base-cubic;
+
+                    &:hover {
+                        background: transparentize($white, 0.6);
+                        transition: background 0.2s $base-cubic;
+                    }
+                }
+
+                &.current-menu-item {
+                    a {
+                        background: $white;
+                    }
+                }
+
+                &.current-menu-item {
+                    a {
+                        background: $white;
+
+                        &:hover {
+                            background: $white;
+                        }
+                    }
+                }
             }
         }
     }

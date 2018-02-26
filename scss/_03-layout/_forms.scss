@@ -5,10 +5,10 @@ $formplaceholdercolor: $blue;
 $forminvalidbackground: red;
 $forminvalidcolor: $white;
 
-$formsuccessbackground: orange;
+$formsuccessbackground: $black;
 $formsuccesstextcolor: $white;
 
-$formbuttonbackground: orange;
+$formbuttonbackground: $black;
 $formbuttoncolor: $white;
 
 fieldset {
@@ -36,6 +36,8 @@ textarea,
     font-family: $base-sans-font;
     color: $formtextcolor;
     appearance: none;
+
+
 
     border: 3px solid $formbordercolor;
     border-radius: 0 !important;

@@ -1,1 +1,23 @@
-Copyright {{"now"|date('Y')}}
+<footer class="section--footer flex flex--wrap justify--between spacing--gutter spacing--vert-2">
+	<div class="grid--half grid--sm-third">{% if options.footer.schedule %}<a href="{{options.footer.schedule.url}}" title="{{options.footer.schedule.title}}" target="{{options.footer.schedule.target}}" class="color--black text--uppercase font--large font--cholla">{{options.footer.schedule.title}}</a>{% endif %}</div>
+	<div class="grid--half grid--sm-third">
+		{% for link in options.footer.links %}
+			<a href="{{link.url}}" title="{{link.title}}" target="{{link.target}}" class="color--black block">{{link.title}}</a>
+		{% endfor %}
+	</div>
+	<div class="grid--one grid--sm-third">
+		<a href="{{options.footer.address.url}}" title="{{options.footer.address.title}}" target="{{options.footer.address.target}}" class="color--black">{{options.footer.address.title}}</a>
+	</div>
+	<div class="grid--one font--tiny text--center spacing--vert-2">
+		{% for link in options.footer.sublinks %}
+			{% if link.url %}
+				<a href="{{link.url}}" title="{{link.title}}" target="{{link.target}}" class="color--black">{{link.title}}</a>
+			{% else %}
+				<span class="color--black ">{{link.title}}</span>
+			{% endif %}
+
+			{% if loop.index == 1 %}<span class="hidden--mob spacing--horiz-half"> | </span> Copyright {{"now"|date('Y')}} {{site.title}} <span class="hidden--mob spacing--horiz-half"> | </span>{% endif %}
+		{% endfor %}
+	</div>
+	<i class="icon-lines" data-grunticon-embed></i>
+</footer>

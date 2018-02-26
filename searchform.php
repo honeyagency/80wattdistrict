@@ -18,5 +18,5 @@ $searchButton      = get_field('field_5a19befc26180', 'options');
 		<span class="screen-reader-text"><?php echo $searchPlaceholder; ?></span>
 	</label>
 	<input type="search" id="<?php echo $unique_id; ?>" class="search-field" placeholder="<?php echo $searchPlaceholder; ?>" value="<?php echo get_search_query(); ?>" name="s" />
-	<button type="submit" class="search-submit screen-reader-text"><?php echo $searchButton; ?></button>
+	<button type="submit" class="search-submit hidden--mob"><?php echo $searchButton; ?></button>
 </form>

@@ -8,16 +8,16 @@
 {% include 'components/header.twig' %}
 <main role="main" class="content-wrapper">
 	{% if title %}<h1>{{title}}</h1>{% endif %}
-		{% block content %}
-			Sorry, no content
-		{% endblock %}
-
+	{% block content %}
+		Sorry, no content
+	{% endblock %}
 </main>
 {% block footer %}
-	<footer>
-		{% include 'footer.twig' %}
-	</footer>
+	
+	{% include 'footer.twig' %}
+	
 	{{ function('wp_footer') }}
 {% endblock %}
+{% include 'components/sections/section--search.twig' %}
 </body>
 </html>
