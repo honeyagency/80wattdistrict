@@ -14,15 +14,20 @@
     @include media($screen-sm) {
         font-size: 1.2em;
     }
-
 }
-p.font--large{
+
+p.font--large {
     margin-bottom: 1.5em;
 }
 
-.font--cholla{
+.font--leauge {
+    font-family: $heading-font-family;
+}
+
+.font--cholla {
     font-family: $cta-font;
 }
+
 .font--sans {
     font-family: $base-sans-font;
 }

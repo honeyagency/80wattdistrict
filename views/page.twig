@@ -1,13 +1,13 @@
 {% extends "base.twig" %}
-
 {% block content %}
 	{% include 'components/sections/section--header.twig' %}
-		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			<section class="article-content">
-				<h1 class="article-h1">{{post.title}}</h1>
+	<article class="post-type-{{post.post_type}} bg--white" id="post-{{post.ID}}">
+		<section class="article-content max-wrap margin--center spacing--gutter spacing--vert-2 spacing--dsk-vert-4 flex flex--wrap justify--between">
+			<div class="grid--one grid--sm-three-fifths">
+			<h1 class="h2">{{post.title}}</h1>
 
-					{{post.content}}
-
-			</section>
-		</article>
+			{{post.content}}
+		</div>
+		</section>
+	</article>
 {% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.twig" %}
+{% block content %}
+	{% include 'components/sections/section--header.twig' %}
+	<article class="post-type-{{post.post_type}} bg--white" id="post-{{post.ID}}">
+		<section class="article-content max-wrap margin--center spacing--gutter spacing--vert-2 spacing--dsk-vert-4 flex flex--wrap justify--between">
+			<div class="grid--one grid--sm-three-fifths">
+				<h1 class="h2">{{post.title}}</h1>
+				{{post.content}}
+			</div>
+			<aside class="grid--sm-third">
+				{# {{about.map}} #}
+				{% for stat in about.stats %}
+					<div class="block--stat icon-{{stat.icon.type}} flex flex--wrap justify--around align--items-end margin--bot-2">
+						{% if stat.icon.type =='icon' %}
+							<i class="icon-{{stat.icon.class}}" data-grunticon-embed></i>
+						{% else %}
+							<img src="{{stat.icon.image}}" alt=""/>
+						{% endif %}
+						<div>
+							{% if stat.layout == 'large' %}
+								<div class="h2 font--leauge text--uppercase line--1 mar--no">{{stat.large_text}}</div>
+								<div class="font--cholla text--uppercase line--1 mar--no">{{stat.small_text}}</div>
+							{% else %}
+								<div class="font--cholla text--uppercase line--1 mar--no">{{stat.small_text}}</div>
+								<div class="h2 font--leauge text--uppercase line--1 mar--no">{{stat.large_text}}</div>
+							{% endif %}
+						</div>
+					</div>
+				{% endfor %}
+			</aside>
+		</section>
+	</article>
+{% endblock %}

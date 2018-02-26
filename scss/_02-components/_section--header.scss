@@ -4,6 +4,37 @@
 
         img {
             width: 100%;
+            display: block;
+            margin-bottom: 0;
+        }
+    }
+
+    .icon-lines-wide {
+        display: block;
+        width: 100%;
+        top: -2em;
+
+        @include media($screen-sm) {
+            top: -2.5em;
+        }
+
+
+        position: relative;
+        margin-bottom: -3.5em;
+        overflow: hidden;
+
+        svg {
+            width: 220%;
+
+            @include media($screen-sm) {
+                width: 120%;
+            }
+
+
+            height: 100%;
+            left: 50%;
+            position: relative;
+            transform: translateX(-50%);
         }
     }
 }

@@ -1,3 +1,5 @@
+.icon-lines-wide { background-image: url('app/icons/lines-wide.png'); background-repeat: no-repeat; }
+
 .icon-lines { background-image: url('app/icons/lines.png'); background-repeat: no-repeat; }
 
 .icon-logo { background-image: url('app/icons/logo.png'); background-repeat: no-repeat; }
@@ -11,6 +13,10 @@
 .icon-social--instagram { background-image: url('app/icons/social--instagram.png'); background-repeat: no-repeat; }
 
 .icon-social--search { background-image: url('app/icons/social--search.png'); background-repeat: no-repeat; }
+
+.icon-stat-building { background-image: url('app/icons/stat-building.png'); background-repeat: no-repeat; }
+
+.icon-stat-graph { background-image: url('app/icons/stat-graph.png'); background-repeat: no-repeat; }
 
 .icon-tri-plus { background-image: url('app/icons/tri-plus.png'); background-repeat: no-repeat; }
 

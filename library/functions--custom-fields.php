@@ -117,3 +117,41 @@ function prepareHeaderFields()
     );
     return $header;
 }
+
+function prepareAboutFields()
+{
+    $map = get_field('field_5a946439a56d9');
+    if (have_rows('field_5a946452a56da')) {
+        $stat = array();
+        while (have_rows('field_5a946452a56da')) {
+            the_row();
+            $iconType = get_sub_field('field_5a94645da56db');
+            $icon     = array(
+                'type' => $iconType,
+            );
+
+            if ($iconType != 'icon') {
+                $imageId = get_sub_field('field_5a94651fa56e0');
+                $image   = null;
+                if (!empty($imageId)) {
+                    $icon['image'] = new TimberImage($imageId);
+                }
+            } else {
+                $icon['class'] = get_sub_field('field_5a946512a56df');
+            }
+
+            $stat[] = array(
+                'icon'       => $icon,
+                'large_text' => get_sub_field('field_5a9464c7a56dc'),
+                'small_text' => get_sub_field('field_5a9464cea56dd'),
+                'layout'     => get_sub_field('field_5a9464d4a56de'),
+            );
+        }
+    }
+    $about = array(
+        'map'   => $map,
+        'stats' => $stat,
+    );
+
+    return $about;
+}

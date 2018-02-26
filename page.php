@@ -28,6 +28,9 @@ if (is_front_page() == true) {
     $context['home'] = prepareHomepageFields();
 } else {
     $context['header'] = prepareHeaderFields();
+    if (is_page(7)) {
+        $context['about'] = prepareAboutFields();
+    }
 }
 
 $context['post'] = $post;
