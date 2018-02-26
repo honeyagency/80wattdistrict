@@ -155,3 +155,22 @@ function prepareAboutFields()
 
     return $about;
 }
+
+function prepareServiceFields()
+{
+    if (have_rows('field_5a9491ede958d')) {
+        $items = array();
+        while (have_rows('field_5a9491ede958d')) {
+            the_row();
+            $items[] = array(
+                'title'   => get_sub_field('field_5a949208e958e'),
+                'content' => get_sub_field('field_5a94920ee958f'),
+            );
+        }
+    }
+    $services = array(
+        'title' => get_field('field_5a9491d7e958c'),
+        'items' => $items,
+    );
+    return $services;
+}

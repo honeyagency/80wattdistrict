@@ -1,0 +1,21 @@
+{% extends "base.twig" %}
+{% block content %}
+	{% include 'components/sections/section--header.twig' %}
+	<article class="post-type-{{post.post_type}} bg--white" id="post-{{post.ID}}">
+		<section class="article-content max-wrap margin--center spacing--gutter flex flex--wrap justify--between align--items-start">
+			<div class="grid--one grid--sm-half grid--md-three-fifths spacing--vert-2 spacing--dsk-vert-4 ">
+				<h1 class="h2">{{post.title}}</h1>
+				{{post.content}}
+			</div>
+			<aside class="grid--one grid--sm-half grid--md-third spacing--vert-2 border-box spacing--dsk-vert-4 bg--blue spacing--horiz-1">
+				<h2>{{sidebar.title}}</h2>
+				{% for item in sidebar.items %}
+					<div>
+						<h5>{{item.title}}</h5>
+						{{item.content}}
+					</div>
+				{% endfor %}
+			</aside>
+		</section>
+	</article>
+{% endblock %}

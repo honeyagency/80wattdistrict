@@ -30,6 +30,8 @@ if (is_front_page() == true) {
     $context['header'] = prepareHeaderFields();
     if (is_page(7)) {
         $context['about'] = prepareAboutFields();
+    } elseif (is_page(9)) {
+        $context['sidebar'] = prepareServiceFields();
     }
 }
 
