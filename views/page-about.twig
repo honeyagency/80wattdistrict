@@ -7,7 +7,7 @@
 				<h1 class="h2">{{post.title}}</h1>
 				{{post.content}}
 			</div>
-			<aside class="grid--sm-third">
+			<aside class="grid--one grid--sm-third">
 				<section class="section--about-map">
 				<div class="acf-map" data-address="{{about.map.address}}">
 					<div class="marker" data-lat="{{about.map.lat}}" data-lng="{{about.map.lng}}" data-center-lat="{{about.map.center.lat}}" data-center-lng="{{about.map.center.lng}}">
@@ -16,7 +16,7 @@
 				</div>
 			</section>
 				{% for stat in about.stats %}
-					<div class="block--stat icon-{{stat.icon.type}} flex flex--wrap justify--around align--items-end margin--bot-2">
+					<div class="block--stat icon-{{stat.icon.type}} grid--one dsk--flex flex--wrap justify--around align--items-end margin--bot-2">
 						{% if stat.icon.type =='icon' %}
 							<i class="icon-{{stat.icon.class}}" data-grunticon-embed></i>
 						{% else %}
