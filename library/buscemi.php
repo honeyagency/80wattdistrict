@@ -32,6 +32,13 @@ if (!is_admin()) {
     add_action("wp_enqueue_scripts", "jquery_enqueue", 11);
 }
 
+function my_acf_init() {
+    
+    acf_update_setting('google_api_key', 'AIzaSyBiHGcSRZk_4-FWu6v5umuRisatRjBHtTc');
+}
+
+add_action('acf/init', 'my_acf_init');
+
 function jquery_enqueue()
 {
     wp_dequeue_script('jquery');

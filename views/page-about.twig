@@ -8,7 +8,13 @@
 				{{post.content}}
 			</div>
 			<aside class="grid--sm-third">
-				{# {{about.map}} #}
+				<section class="section--about-map">
+				<div class="acf-map" data-address="{{about.map.address}}">
+					<div class="marker" data-lat="{{about.map.lat}}" data-lng="{{about.map.lng}}" data-center-lat="{{about.map.center.lat}}" data-center-lng="{{about.map.center.lng}}">
+						<p class="address">{{about.map.address}}</p>
+					</div>
+				</div>
+			</section>
 				{% for stat in about.stats %}
 					<div class="block--stat icon-{{stat.icon.type}} flex flex--wrap justify--around align--items-end margin--bot-2">
 						{% if stat.icon.type =='icon' %}
@@ -30,4 +36,5 @@
 			</aside>
 		</section>
 	</article>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiHGcSRZk_4-FWu6v5umuRisatRjBHtTc"></script>
 {% endblock %}
