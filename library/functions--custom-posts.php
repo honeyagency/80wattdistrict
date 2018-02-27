@@ -5,14 +5,23 @@ function getCustomPosts($posttype = '', $limit = '', $category = '', $order = 't
     if (is_numeric($category)) {
         $category = get_cat_name($category);
     }
+    if ($order == 'eventdate') {
+        $args = array(
+            'posts_per_page' => $limit,
+            'post_type'      => $posttype,
+            'meta_key'       => 'start_date',
+            'orderby'        => 'meta_value',
+            'order'          => 'ASC',
+        );
+    } else {
+        $args = array(
+            'posts_per_page' => $limit,
+            'post_type'      => $posttype,
+            'order'          => 'DESC',
+            'orderby'        => $order,
 
-    $args = array(
-        'posts_per_page' => $limit,
-        'post_type'      => $posttype,
-        'order'          => 'DESC',
-        'orderby'        => $order,
-
-    );
+        );
+    }
 
     // Begin statememnts to append the $args array, just so the arrays stay light and clean.
 
@@ -79,11 +88,14 @@ function getSinglePost($posttype = null)
         'title'      => get_the_title(),
         'categories' => $categories,
         'tags'       => get_the_tags(),
+        'excerpt'    => get_the_excerpt(),
         'post_type'  => $posttype,
         'image'      => $attachedimage,
         'link'       => get_permalink(),
     );
-
+    if ($posttype == 'event') {
+        $singlePostArray['event'] = prepareEventFields();
+    }
     // Restores original Post Data
     wp_reset_postdata();
 

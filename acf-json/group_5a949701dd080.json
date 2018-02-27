@@ -1,0 +1,57 @@
+{
+    "key": "group_5a949701dd080",
+    "title": "Events",
+    "fields": [
+        {
+            "key": "field_5a94970678653",
+            "label": "Start Date",
+            "name": "start_date",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "Ymd",
+            "first_day": 1
+        },
+        {
+            "key": "field_5a94972e78656",
+            "label": "Start Time",
+            "name": "start_time",
+            "type": "time_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "g:i a",
+            "return_format": "H:i:s"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "event"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1519688455
+}

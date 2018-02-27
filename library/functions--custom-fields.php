@@ -174,3 +174,12 @@ function prepareServiceFields()
     );
     return $services;
 }
+function prepareEventFields()
+{
+ 
+    $event = array(
+        'start_date' => get_field('field_5a94970678653'),
+        'start_time' => get_field('field_5a94972e78656'),
+    );
+    return $event;
+}

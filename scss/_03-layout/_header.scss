@@ -7,3 +7,9 @@ header {
         align-items: flex-end;
     }
 }
+
+.no-header-image {
+    header {
+        padding-bottom: 0;
+    }
+}

@@ -198,9 +198,11 @@ hr {
     }
 }
 
-p{
-    a {
-    color: $black;
-    border-bottom: 2px solid $blue;
-}
+main {
+    p, li {
+        a {
+            color: $black;
+            border-bottom: 2px solid $blue;
+        }
+    }
 }

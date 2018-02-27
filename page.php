@@ -32,6 +32,9 @@ if (is_front_page() == true) {
         $context['about'] = prepareAboutFields();
     } elseif (is_page(9)) {
         $context['sidebar'] = prepareServiceFields();
+    } elseif (is_page(13)) {
+$context['news'] = getCustomPosts('news', '10', null, 'date', null, null);
+        $context['events'] = getCustomPosts('event', '10', null, 'eventdate', null, null);
     }
 }
 

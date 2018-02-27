@@ -1,0 +1,25 @@
+{% extends "base.twig" %}
+{% block content %}
+	{% include 'components/sections/section--header.twig' %}
+	<article class="post-type-{{post.post_type}} bg--white" id="post-{{post.ID}}">
+		<section class="article-content max-wrap margin--center spacing--gutter flex flex--wrap justify--between align--items-start">
+			<div class="grid--one grid--sm-half grid--md-three-fifths spacing--vert-2 spacing--dsk-vert-4 ">
+				<h1 class="h2">{{post.title}}</h1>
+				{{post.content}}
+				{% for news in news %}
+					{% include 'tease-news.twig' %}
+				{% endfor %}
+			</div>
+			<div class="section--events grid--one grid--sm-half grid--md-third spacing--vert-2 border-box spacing--dsk-vert-4 border--1 spacing--horiz-1">
+				<h2>Upcoming Events</h2>
+				<ul>
+					{% for event in events %}
+						{% if month == event.event.start_date|date('F') %}{% else %}<h5>{{event.event.start_date|date('F')}}</h5>{% endif %}
+						<li>{{event.event.start_date|date('M, d')}} - <a href="{{event.link}}">{{event.title}}</a></li>
+						{% set month = event.event.start_date|date('F') %}
+					{% endfor %}
+				</ul>
+			</div>
+		</section>
+	</article>
+{% endblock %}
