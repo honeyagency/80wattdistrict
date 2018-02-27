@@ -221,8 +221,8 @@
         {
             "key": "field_5a1a0cd8d410a",
             "label": "News Form",
-            "name": "news_form",
-            "type": "textarea",
+            "name": "",
+            "type": "message",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -231,11 +231,9 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
+            "message": "We use this form in a few places, so it's saved under <code>Options<\/code> > <code>Site Settings<\/code>",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_5a1a0ce1d410b",
@@ -298,5 +296,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1511656796
+    "modified": 1519774554
 }

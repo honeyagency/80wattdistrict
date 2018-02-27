@@ -33,7 +33,7 @@ if (is_front_page() == true) {
     } elseif (is_page(9)) {
         $context['sidebar'] = prepareServiceFields();
     } elseif (is_page(13)) {
-
+        $context['newsevents'] = prepareNewsEventsPage();
         global $paged;
         if (!isset($paged) || !$paged) {
             $paged = 1;

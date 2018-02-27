@@ -1,3 +1,19 @@
 .section--events {
-    border: 2px solid;
+    .block--events {
+        border: 2px solid;
+    }
+
+    .block--email {
+        input.email {
+            width: 100%;
+            margin-bottom: 1em;
+        }
+
+        .icon-email {
+            float: right;
+            display: inline-block;
+            height: 40px;
+            width: 55px;
+        }
+    }
 }

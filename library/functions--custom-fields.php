@@ -5,6 +5,7 @@ function prepareSiteOptions()
     $social = array(
         'facebook'  => get_field('field_5a19be51866f5', 'options'),
         'instagram' => get_field('field_5a19be5b866f6', 'options'),
+        'email'     => get_field('field_5a95eaee0f423', 'options'),
     );
     $defaultImageId = get_field('field_5a19bf1ee4980', 'options');
     if (!empty($defaultImageId)) {
@@ -176,10 +177,20 @@ function prepareServiceFields()
 }
 function prepareEventFields()
 {
- 
+
     $event = array(
         'start_date' => get_field('field_5a94970678653'),
         'start_time' => get_field('field_5a94972e78656'),
     );
     return $event;
+}
+function prepareNewsEventsPage()
+{
+    $section = array(
+        'news'   => get_field('field_5a95ec41f00e9'),
+        'events' => get_field('field_5a95ec58f00eb'),
+        'email'  => get_field('field_5a95ec6bf00ed'),
+        'signup' => get_field('field_5a95ec79f00ee'),
+    );
+    return $section;
 }

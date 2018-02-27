@@ -1,75 +1,10 @@
 {
-    "key": "group_5a19be36b240c",
-    "title": "Options",
+    "key": "group_5a95ec3613a4d",
+    "title": "News & Events Page",
     "fields": [
         {
-            "key": "field_5a19be47866f4",
-            "label": "Social",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5a19be51866f5",
-            "label": "Facebook",
-            "name": "facebook",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_5a19be5b866f6",
-            "label": "Instagram",
-            "name": "instagram",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_5a95eaee0f423",
-            "label": "Email Signup Form",
-            "name": "email_signup_form",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_5a19beeb2617e",
-            "label": "Search",
+            "key": "field_5a95ec3df00e8",
+            "label": "News Section",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -84,9 +19,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_5a19bef32617f",
-            "label": "Search Placeholder",
-            "name": "search_placeholder",
+            "key": "field_5a95ec41f00e9",
+            "label": "Title",
+            "name": "news_section_title",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -103,9 +38,25 @@
             "maxlength": ""
         },
         {
-            "key": "field_5a19befc26180",
-            "label": "Search Button",
-            "name": "search_button",
+            "key": "field_5a95ec4ff00ea",
+            "label": "Events Section",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5a95ec58f00eb",
+            "label": "Title",
+            "name": "events_section_title",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -122,8 +73,8 @@
             "maxlength": ""
         },
         {
-            "key": "field_5a1f518682f04",
-            "label": "Defaults",
+            "key": "field_5a95ec62f00ec",
+            "label": "Email Signup Section",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -138,11 +89,11 @@
             "endpoint": 0
         },
         {
-            "key": "field_5a19bf1ee4980",
-            "label": "Default Image",
-            "name": "default_image",
-            "type": "image",
-            "instructions": "Anytime the site needs an image (social media, search engine displays) and the page doesn't have one, the site will display this.",
+            "key": "field_5a95ec6bf00ed",
+            "label": "Title",
+            "name": "email_section_signup_title",
+            "type": "text",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -150,24 +101,55 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "id",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5a95ec79f00ee",
+            "label": "Text Blurb",
+            "name": "signup_text_blurb",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 1
+        },
+        {
+            "key": "field_5a95ec9bf00ef",
+            "label": "Signup Form",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "We use this form in a few places, so it's saved under <code>Options<\/code> > <code>Site Settings<\/code>",
+            "new_lines": "wpautop",
+            "esc_html": 0
         }
     ],
     "location": [
         [
             {
-                "param": "options_page",
+                "param": "page",
                 "operator": "==",
-                "value": "acf-options-site-settings"
+                "value": "13"
             }
         ]
     ],
@@ -179,5 +161,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1519774465
+    "modified": 1519774954
 }
