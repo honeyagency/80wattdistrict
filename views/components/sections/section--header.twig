@@ -15,4 +15,11 @@
 		{% endif %}
 		<i class="icon-lines-wide" data-grunticon-embed></i>
 	</section>
+{% elseif post.get_thumbnail %}
+	<section class="section--header flex flex--wrap">
+		<div class="header--image grid--one">
+			<img src="{{post.thumbnail.src|resize(208,65)}}" data-original="{{post.thumbnail.src|resize(1280, 400)}}" alt="{{post.thumbnail.src.caption}}" data-original-set="{{post.thumbnail.src|resize(640, 200)}}  640w,{{post.thumbnail.src|resize(750, 235)}}  750w,{{post.thumbnail.src|resize(1080,337)}} 1080w,{{post.thumbnail.src|resize(1280, 400)}} 1280w,{{post.thumbnail.src|resize(1360,425)}} 1366w,{{post.thumbnail.src|resize(1440,450)}} 1440w,{{post.thumbnail.src|resize(1920,600)}} 1920w, {{post.thumbnail.src|resize(2880,900)}} 2880w" sizes="100vw">
+		</div>
+		<i class="icon-lines-wide" data-grunticon-embed></i>
+	</section>
 {% endif %}
