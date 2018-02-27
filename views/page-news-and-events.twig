@@ -9,6 +9,10 @@
 				{% for news in news %}
 					{% include 'tease-news.twig' %}
 				{% endfor %}
+				{% if news.pagination %}
+					{% set  pagination = news.pagination %}
+					{% include 'components/sections/section--pagination.twig' %}
+				{% endif %}
 			</div>
 			<div class="section--events grid--one grid--sm-half grid--md-third spacing--vert-1 border-box  border--1 spacing--horiz-1">
 				<h2>Upcoming Events</h2>

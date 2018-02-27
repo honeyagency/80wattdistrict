@@ -24,4 +24,8 @@ $templates = array( 'index.twig' );
 if ( is_home() ) {
 	array_unshift( $templates, 'home.twig' );
 }
+$context['pagination'] = Timber::get_pagination();
+$numberOfPosts         = get_option('posts_per_page');
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$offset = $paged * floatval($numberOfPosts) - floatval($numberOfPosts);
 Timber::render( $templates, $context );

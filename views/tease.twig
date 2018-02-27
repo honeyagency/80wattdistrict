@@ -6,5 +6,5 @@
 		{% endif %}{{post.get_preview}}</div>
 		
 	{% endblock %}
-	<hr class="margin--vert-2">
+	{% if loop.last %}<br>{% else %}<hr class="margin--vert-2">{% endif %}
 </article>

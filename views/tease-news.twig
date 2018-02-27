@@ -1,9 +1,11 @@
 {% extends "tease.twig" %}
 {% block content %}
+	{% if news %}{% else %}{% set news = post %}{% endif %}
 	<h4 class="margin--bot-half"><a href="{{news.link}}" class="color--black">{{news.title}}</a><div class="piece--news-date font--sans font--standard text--right bg--blue color--black inline-block spacing--horiz-half">{{news.date|date('M, d')}}</div></h4>
-
-	<div>{% if news.image.src %}
-		<img src="{{news.image.src|resize(50,50)}}" data-original="{{news.image.src|resize(450,450)}}" width="225" align="right" />
-	{% endif %}{{news.excerpt}}</div>
-	
+	<div>
+		{% if news.thumbnail.src %}	
+			<img src="{{news.thumbnail.src|resize(50,50)}}" data-original="{{news.thumbnail.src|resize(450,450)}}" width="225" align="right" />
+		{% endif %}
+		{{news.excerpt}}{{news.get_preview}}
+	</div>
 {% endblock %}

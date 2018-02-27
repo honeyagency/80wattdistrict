@@ -33,8 +33,23 @@ if (is_front_page() == true) {
     } elseif (is_page(9)) {
         $context['sidebar'] = prepareServiceFields();
     } elseif (is_page(13)) {
-$context['news'] = getCustomPosts('news', '10', null, 'date', null, null);
+
+        global $paged;
+        if (!isset($paged) || !$paged) {
+            $paged = 1;
+        }
+        $args = array(
+            'post_type'      => 'news',
+            'posts_per_page' => 10,
+            'order'          => 'DESC',
+            'orderby'        => 'date',
+            'paged'          => $paged,
+        );
+        $context['news'] = new Timber\PostQuery($args);
+
+        // $context['news']   = getCustomPosts('news', '5', null, 'date', null, null, $paged);
         $context['events'] = getCustomPosts('event', '10', null, 'eventdate', null, null);
+
     }
 }
 

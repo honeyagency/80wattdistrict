@@ -1,7 +1,13 @@
 {% extends "base.twig" %}
-
 {% block content %}
-	{% for post in posts %}
-		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-	{% endfor %}
+	<article class="post-type-{{post.post_type}} bg--white" id="post-{{post.ID}}">
+		<section class="article-content max-wrap margin--center spacing--gutter spacing--vert-2 spacing--dsk-vert-4 flex flex--wrap justify--between">
+			<div class="grid--one grid--sm-three-fifths">
+				{% for post in posts %}
+					{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+				{% endfor %}
+				{% if pagination %}{% include 'components/sections/section--pagination.twig' %}{% endif %}
+			</div>
+		</section>
+	</article>
 {% endblock %}

@@ -1,0 +1,35 @@
+.section--pagination {
+    border-top: 3px solid;
+    padding-top: .25em;
+
+    .icon-angle-right {
+        &.left {
+            transform: rotateY(-180deg);
+        }
+
+        height: 12px;
+        width: 7px;
+        display: inline-block;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .page-number {
+        padding: 0 0.5em;
+
+        &:first-of-type {
+            &.current {
+                padding-left: 0;
+            }
+        }
+    }
+
+    .page-numbers {
+        &.next {
+            float: right;
+        }
+    }
+}

@@ -6,7 +6,12 @@
 			<div class="grid--one grid--sm-three-fifths">
 				<h1 class="h2">{{post.title}}</h1>
 				<p class="blog-author">
-					{% if post.post_type == 'event' %}{{event.start_date|date('F d, Y')}}{% if event.start_time %}<span class="nobreak"> {{event.start_time|date('g:i a')}}</span>{% endif %}{% else %}<span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&bull;</span> {{ post.post_date|date}}{% endif %}
+					{% if post.post_type == 'event' %}
+						{{event.start_date|date('F d, Y')}}{% if event.start_time %}<span class="nobreak"> {{event.start_time|date('g:i a')}}</span>{% endif %}
+					{% elseif post.post_type == 'development' %}
+					{% else %}
+						<span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&bull;</span> {{ post.post_date|date}}
+					{% endif %}
 				</p>
 				{{post.content}}
 			</div>

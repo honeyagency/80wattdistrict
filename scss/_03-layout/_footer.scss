@@ -22,4 +22,14 @@ footer {
             height: 100%;
         }
     }
+
+    .icon-tri-plus {
+        float: right;
+        transform: rotate(90deg);
+    }
+
+    .block--last-footer {
+        margin-top: 5em;
+        margin-bottom: -3em;
+    }
 }
