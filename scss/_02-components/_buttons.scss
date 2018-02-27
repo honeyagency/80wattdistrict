@@ -1,4 +1,4 @@
-.button {
+.button, .read-more {
     text-decoration: none;
     font-family: $cta-font;
     text-transform: uppercase;
@@ -37,4 +37,20 @@
         background-position: 0 0%;
         transition: background-position 0.1s $base-cubic, color 0.1s $base-cubic;
     }
+}
+
+.read-more {
+    border: 3px solid $black;
+    color: $black;
+    background: linear-gradient($black 0%, $black 50%, transparent 50%, transparent 100%);
+    background-size: 210%;
+    background-position: 0 95%;
+
+    &:hover {
+        border: 3px solid $black;
+        color: $yellow;
+    }
+
+    display: table;
+    margin-top: 1em;
 }

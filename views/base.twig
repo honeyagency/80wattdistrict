@@ -7,7 +7,6 @@
 <body class="{{body_class}} bg--yellow {% if header.images.one %}{% else %}no-header-image{% endif %}" data-template="base.twig">
 {% include 'components/header.twig' %}
 <main role="main" class="content-wrapper">
-	{% if title %}<h1>{{title}}</h1>{% endif %}
 	{% block content %}
 		Sorry, no content
 	{% endblock %}

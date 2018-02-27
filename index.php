@@ -13,19 +13,22 @@
  * @since   Timber 0.1
  */
 
-if ( ! class_exists( 'Timber' ) ) {
-	echo 'Timber not activated. Make sure you activate the plugin in <a href="/wp-admin/plugins.php#timber">/wp-admin/plugins.php</a>';
-	return;
+if (!class_exists('Timber')) {
+    echo 'Timber not activated. Make sure you activate the plugin in <a href="/wp-admin/plugins.php#timber">/wp-admin/plugins.php</a>';
+    return;
 }
-$context = Timber::get_context();
+$context          = Timber::get_context();
 $context['posts'] = Timber::get_posts();
-$context['foo'] = 'bar';
-$templates = array( 'index.twig' );
-if ( is_home() ) {
-	array_unshift( $templates, 'home.twig' );
+$context['foo']   = 'bar';
+$templates        = array('index.twig');
+if (is_home()) {
+    array_unshift($templates, 'home.twig');
+}
+if (is_search()) {
+	$context['searchpage'] = true;
 }
 $context['pagination'] = Timber::get_pagination();
 $numberOfPosts         = get_option('posts_per_page');
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$offset = $paged * floatval($numberOfPosts) - floatval($numberOfPosts);
-Timber::render( $templates, $context );
+$paged                 = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$offset                = $paged * floatval($numberOfPosts) - floatval($numberOfPosts);
+Timber::render($templates, $context);

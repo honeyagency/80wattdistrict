@@ -2,7 +2,9 @@
 {% block content %}
 	<article class="post-type-{{post.post_type}} bg--white" id="post-{{post.ID}}">
 		<section class="article-content max-wrap margin--center spacing--gutter spacing--vert-2 spacing--dsk-vert-4 flex flex--wrap justify--between">
-			<div class="grid--one grid--sm-three-fifths">
+			{% if searchpage %}<div class="grid--one grid--sm-third order--2">{% include 'components/sections/section--search.twig' with {visible:true} %}</div>{% endif %}
+			<div class="grid--one grid--sm-three-fifths order--1">
+				{% if title %}<h1 class="h2">{{title}}</h1>{% endif %}
 				{% for post in posts %}
 					{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
 				{% endfor %}

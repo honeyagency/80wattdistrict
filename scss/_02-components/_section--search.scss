@@ -1,4 +1,4 @@
-.section--search-modal {
+.section--search-modal.popup {
     z-index: -10;
     opacity: 0;
     transition: opacity 0.2s $base-cubic;
@@ -22,7 +22,9 @@
         }
     }
 
-    form.search-form {
+  
+}
+  form.search-form {
         // transition: background 0.2s $base-cubic;
         // display: inline-block;
         // background: transparent;
@@ -30,6 +32,7 @@
 
         button, input[type="search"] {
             flex-grow: 1;
+            padding: 8px 10px;
         }
 
         button {
@@ -69,8 +72,6 @@
             }
         }
     }
-}
-
 body {
     &:before {
         content: ' ';
@@ -94,9 +95,11 @@ body {
         }
 
         .section--search-modal {
+            &.popup{
             z-index: 9999;
             opacity: 1;
             transition: opacity 0.2s $base-cubic;
+        }
         }
 
         form.search-form {
