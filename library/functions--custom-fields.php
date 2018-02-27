@@ -71,8 +71,6 @@ function prepareHomepageFields()
     $news = array(
         'title' => get_field('field_5a1a0cc5d4108'),
         'text'  => get_field('field_5a1a0cd2d4109'),
-        'form'  => get_field('field_5a1a0cd8d410a'),
-
     );
     $developmentImageId = get_field('field_5a1a0d52d6682');
     if (!empty($developmentImageId)) {
