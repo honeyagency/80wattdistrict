@@ -1,11 +1,17 @@
 $link-color: #4aa4ff;
 
-$default-font: "ff-info-text-web-pro", BlinkMacSystemFont, Helvetica, Arial, sans-serif !default;
+$default-font: "ff-info-text-web-pro", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif !default;
+$heading-font-family: "league-gothic", HelveticaNeue-CondensedBold, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif !default;
+$cta-font: "cholla-sans", HelveticaNeue-CondensedBold, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif !default;
+
+
+// $default-font: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif !default;
+// $heading-font-family: HelveticaNeue-CondensedBold, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif !default;
+// $cta-font: HelveticaNeue-CondensedBold, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif !default;
 
 $base-serif-font:$default-font;
 $base-sans-font:$default-font;
-$heading-font-family: "league-gothic",sans-serif;
-$cta-font: "cholla-sans",sans-serif;
+
 
 $heading-font-weight: 600;
 
