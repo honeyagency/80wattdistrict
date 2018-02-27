@@ -40,7 +40,7 @@ if (is_front_page() == true) {
         }
         $args = array(
             'post_type'      => 'news',
-            'posts_per_page' => 10,
+            'posts_per_page' => 7,
             'order'          => 'DESC',
             'orderby'        => 'date',
             'paged'          => $paged,
