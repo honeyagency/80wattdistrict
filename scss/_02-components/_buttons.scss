@@ -3,15 +3,16 @@
     font-family: $cta-font;
     text-transform: uppercase;
     padding: .5em 2em;
-    
     transition: background-position 0.1s $base-cubic, color 0.1s $base-cubic;
+    -webkit-tap-highlight-color: transparent;
 
     &.black {
         border: 3px solid $black;
         color: $black;
         background: linear-gradient($black 0%, $black 50%, transparent 50%, transparent 100%);
-background-size: 210%;
-    background-position: 0 95%;
+        background-size: 210%;
+        background-position: 0 95%;
+
         &:hover {
             border: 3px solid $black;
             color: $yellow;
@@ -22,17 +23,18 @@ background-size: 210%;
         border: 3px solid $blue;
         color: $blue;
         background: linear-gradient($blue 0%, $blue 50%, transparent 50%, transparent 100%);
-background-size: 210%;
-    background-position: 0 95%;
+        background-size: 210%;
+        background-position: 0 95%;
+
         &:hover {
             border: 3px solid $blue;
             color: $white;
         }
     }
 
-    &:hover {
+    &:hover,
+    &:active, &:focus {
         background-position: 0 0%;
         transition: background-position 0.1s $base-cubic, color 0.1s $base-cubic;
-   
     }
 }

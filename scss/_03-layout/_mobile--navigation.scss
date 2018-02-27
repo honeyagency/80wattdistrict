@@ -10,12 +10,13 @@ nav {
             right: 0;
             width: 100%;
             box-sizing: border-box;
-
             -webkit-transform: translate3d(0, 0, 0);
             transform: translateY(105%);
             transition: transform 0.3s $base-cubic;
 
             ul {
+                width: 100%;
+
                 li {
                     -webkit-transform: translate3d(0, 0, 0);
 
@@ -45,7 +46,27 @@ nav {
 
                     transition: transform 0.5s $base-cubic;
                     display: block;
+
+                    a {
+                        display: block;
+                    }
                 }
+            }
+        }
+    }
+}
+
+.block--header-social {
+    a {
+        display: none;
+    }
+
+    .mobile--search {
+        padding: 0em 0.75em;
+
+        form {
+            input {
+                width: 100%;
             }
         }
     }

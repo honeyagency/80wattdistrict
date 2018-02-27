@@ -12,13 +12,17 @@
         @include media($max-sm) {
             position: relative;
             display: block;
-            width: 120vw;
+            width: 128vw;
             left: -20vw;
-            top: -4.5em;
-            margin-bottom: -6.5em;
+            top: -5.5em;
+            margin-bottom: -8.5em;
 
-            .eac0a083-6d18-4da0-9a31-522cc9abd448 {
-                display: none;
+            svg {
+                text {
+                    &:nth-of-type(4), &:nth-of-type(5) {
+                        display: none;
+                    }
+                }
             }
         }
 
