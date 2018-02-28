@@ -5,8 +5,9 @@ html {
             font-size: 1.5rem;
             letter-spacing: -0.3px;
         }
-        nav{
-        	line-height: 1.94;
+
+        nav {
+            line-height: 1.94;
         }
 
         h1, .h1 {}
@@ -30,10 +31,25 @@ html {
             font-size: 1.54rem;
             letter-spacing: 0;
         }
-        .piece--news-date{
-        	line-height: 1.42;
-        	letter-spacing: -0.5px;
-        	margin-top: 15px;
+
+        .piece--news-date {
+            line-height: 1.42;
+            letter-spacing: -0.5px;
+            margin-top: 15px;
         }
     }
+}
+
+main {
+    p {
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+}
+
+img {
+    max-width: 100%;
 }
