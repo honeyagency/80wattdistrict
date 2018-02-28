@@ -13,10 +13,18 @@
     @include media($max-sm) {
         display: block;
         margin: 0 auto;
+        text-align: center;
 
         img, i, div {
             display: block;
             margin: 0 auto;
         }
+
+        img, i {
+            margin-bottom: 1em;
+        }
+
+        font-size: 1.8em !important;
+        margin-bottom: 1em !important;
     }
 }
