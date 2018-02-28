@@ -29,7 +29,21 @@ jQuery(document).ready(function($) {
         var mob = true;
     } else {
         var mob = false;
-    }
+    }$('.trigger--children').on('click touchstart', function(event) {
+            event.preventDefault();
+            $parent = $(this).parent();
+            $child = $parent.find('.section--child-nav');
+            $openChild = $('.section--child-nav.open');
+            if ($parent.hasClass('children--visible')) {
+                $parent.removeClass('children--visible');
+                $child.removeClass('open');
+            } else {
+                $('.children--visible').removeClass('children--visible');
+                $openChild.removeClass('open');
+                $parent.addClass('children--visible');
+                $child.addClass('open');
+            }
+        });
     if (mob == true) {} else {
         $search = $('.toggle-search');
         $search.on('click touchstart', function(event) {
@@ -71,5 +85,6 @@ jQuery(document).ready(function($) {
                 }
             });
         });
+        
     }
 });

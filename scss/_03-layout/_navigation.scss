@@ -2,56 +2,84 @@ nav {
     border-top: 3px solid;
 
     &.main-navigation {
-        ul {
+        > ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
+        }
 
-            li {
+        li {
+            display: inline-block;
+            margin: 0;
+            flex-grow: 1;
+
+            a {
+                display: block;
+                padding: .5em .75em;
+
+                @include media($max-lg) {
+                    font-size: .9em;
+                }
+
+
+                @include media($max-md) {
+                    font-size: .75em;
+                    padding: .4em .7em;
+                }
+
+
                 display: inline-block;
-                margin: 0;
-                flex-grow: 1;
+                transition: background 0.2s $base-cubic;
 
+                &:hover {}
+            }
+
+            &.current-menu-item {
                 a {
-                    display: block;
-                    padding: .5em .75em;
+                    background: $white;
+                }
+            }
 
-                    @include media($max-lg) {
-                        font-size: .9em;
-                    }
-
-
-                    @include media($max-md) {
-                        font-size: .75em;
-                        padding: .4em .7em;
-                    }
-
-
-                    display: inline-block;
-                    transition: background 0.2s $base-cubic;
+            &.current-menu-item {
+                a {
+                    background: $white;
 
                     &:hover {
-                        background: transparentize($white, 0.6);
-                        transition: background 0.2s $base-cubic;
-                    }
-                }
-
-                &.current-menu-item {
-                    a {
                         background: $white;
-                    }
-                }
-
-                &.current-menu-item {
-                    a {
-                        background: $white;
-
-                        &:hover {
-                            background: $white;
-                        }
                     }
                 }
             }
+        }
+    }
+
+    .menu-item-has-children {
+        @include media($screen-sm) {
+            position: relative;
+
+            .nav-drop {
+                transform-origin: top left;
+                background: $white;
+                text-align: center;
+                transform: scale(0.1) translateY(-1em);
+                position: absolute;
+                opacity: 0;
+            }
+
+            // > .nav-link{
+            &:hover {
+                a {
+                    background: transparentize($white, 0.6);
+                    transition: background 0.2s $base-cubic;
+                }
+
+                .nav-drop {
+                    transition: transform 0.2s $base-cubic, opacity 0.2s $base-cubic;
+                    opacity: 1;
+                    transform: scale(1) translateY(0);
+                }
+            }
+
+            // }
         }
     }
 }
