@@ -1,7 +1,7 @@
 <nav role="navigation" class="main-navigation dsk--flex flex--wrap justify--between">
-	<ul>
+	<ul class="grid--sm-three-fourths grid--lg-two-thirds  dsk--flex flex--wrap">
 		{% for item in menu.get_items %}
-			<li class="nav-item {{item.classes | join(' ')}}">
+			<li class="nav-item b {{item.classes | join(' ')}}">
 				<a class="nav-link color--black" href="{{item.get_link}}">{{item.title}}</a>
 				{% if item.get_children %}
 					<ul class="nav nav-drop">

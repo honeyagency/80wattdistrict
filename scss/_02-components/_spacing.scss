@@ -38,7 +38,15 @@
 	padding-left: .7em * $grid;
 
     @include media($screen-sm) {
-	padding-right: 3em * $grid;
+	padding-right: 1.5em * $grid;
+	padding-left: 1.5em * $grid;
+    }
+    @include media($screen-md){
+    	padding-right: 2em * $grid;
+	padding-left: 2em * $grid;
+    }
+    @include media($screen-lg){
+    	padding-right: 3em * $grid;
 	padding-left: 3em * $grid;
     }
 }

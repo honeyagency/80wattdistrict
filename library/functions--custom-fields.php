@@ -95,6 +95,7 @@ function prepareHeaderFields()
 {
 
     $imageOneId = get_field('field_5a8c67b1c743c');
+    
     $imageOne   = null;
     if (!empty($imageOneId)) {
         $imageOne = new TimberImage($imageOneId);

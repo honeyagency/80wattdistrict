@@ -10,24 +10,24 @@ nav {
             li {
                 display: inline-block;
                 margin: 0;
+                flex-grow: 1;
 
                 a {
-                    @include media($screen-xs) {}
+                    display: block;
+                    padding: .5em .75em;
 
-                    @include media($screen-sm) {}
-
-                    @include media($max-md) {
-                        font-size: .75em;
+                    @include media($max-lg) {
+                        font-size: .9em;
                     }
 
 
-                    @include media($screen-lg) {}
-
-                    @include media($screen-xl) {}
+                    @include media($max-md) {
+                        font-size: .75em;
+                        padding: .4em .7em;
+                    }
 
 
                     display: inline-block;
-                    padding: .5em .75em;
                     transition: background 0.2s $base-cubic;
 
                     &:hover {

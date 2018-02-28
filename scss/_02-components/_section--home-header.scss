@@ -2,6 +2,23 @@
     .block--text {
         position: relative;
         z-index: 99;
+
+        .font--large {
+            @include media($max-lg) {
+                font-size: 1em;
+            }
+
+
+            @include media($max-md) {
+                font-size: 0.9em;
+            }
+
+
+            @include media($max-sm) {}
+
+
+            @include media($max-xs) {}
+        }
     }
 
     @include media($max-sm) {
