@@ -1,15 +1,8 @@
 .hdr-logo-link {
-    height: 103px;
-    width: 125px;
     display: inline-block;
     -webkit-tap-highlight-color: transparent;
 
-
-
-
     .icon-logo {
-        width: 125px;
-        height: 103px;
         display: inline-block;
 
         svg {
@@ -17,6 +10,37 @@
             width: 100%;
         }
     }
+
+    height: 78px;
+    width: 95px;
+
+    .icon-logo {
+        height: 78px;
+        width: 95px;
+    }
+
+    @include media($screen-xs) {}
+
+
+    @include media($screen-sm) {}
+
+
+    @include media($screen-md) {}
+
+
+    @include media($screen-lg) {
+        height: 103px;
+        width: 125px;
+
+        .icon-logo {
+            height: 103px;
+            width: 125px;
+        }
+    }
+
+
+    @include media($screen-xl) {}
+
 
     @include media($max-sm) {
         h1.logo {

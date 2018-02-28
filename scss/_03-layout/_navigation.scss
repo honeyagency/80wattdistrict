@@ -12,6 +12,20 @@ nav {
                 margin: 0;
 
                 a {
+                    @include media($screen-xs) {}
+
+                    @include media($screen-sm) {}
+
+                    @include media($max-md) {
+                        font-size: .75em;
+                    }
+
+
+                    @include media($screen-lg) {}
+
+                    @include media($screen-xl) {}
+
+
                     display: inline-block;
                     padding: .5em .75em;
                     transition: background 0.2s $base-cubic;

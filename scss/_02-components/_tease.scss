@@ -1,0 +1,9 @@
+.tease {
+    @include media($max-sm) {
+        font-size: .8em;
+
+        img {
+            width: 120px;
+        }
+    }
+}

@@ -20,14 +20,14 @@
         @include media($max-sm) {
             position: relative;
             display: block;
-            width: 128vw;
-            left: -20vw;
-            top: -5.5em;
-            margin-bottom: -8.5em;
+            width: 112vw;
+            left: -15vw;
+            top: -6.5em;
+            margin-bottom: -8.2em;
 
             svg {
-                text {
-                    &:nth-of-type(4), &:nth-of-type(5) {
+                g {
+                    &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(6) {
                         display: none;
                     }
                 }

@@ -6,6 +6,13 @@ header {
         justify-content: space-between;
         align-items: flex-end;
     }
+
+    @extend .spacing--gutter;
+
+    @include media($screen-xl) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
 }
 
 .no-header-image {
