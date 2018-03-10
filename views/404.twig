@@ -1,5 +1,10 @@
 {% extends "base.twig" %}
-
 {% block content %}
-	Sorry, we couldn't find what you're looking for.
+	<section class="article-content max-wrap margin--center spacing--gutter spacing--vert-2 spacing--dsk-vert-4 flex flex--wrap justify--between">
+		<div class="grid--one grid--sm-three-fifths">
+			<h1 class="h2">{{post.title}}</h1>
+			Sorry, we couldn't find what you're looking for.
+		</div>
+		<div class="grid--one grid--sm-third order--2">{% include 'components/sections/section--search.twig' with {visible:true} %}</div>
+	</section>
 {% endblock %}
