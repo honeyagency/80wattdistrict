@@ -53,3 +53,7 @@ main {
 img {
     max-width: 100%;
 }
+.flickity-slider > img{
+        border-left: 10px solid $white;
+    border-right: 10px solid $white;
+}

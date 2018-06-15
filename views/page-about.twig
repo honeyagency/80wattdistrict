@@ -6,6 +6,7 @@
 			<div class="grid--one grid--sm-three-fifths">
 				<h1 class="h2">{{post.title}}</h1>
 				{{post.content}}
+				
 			</div>
 			<aside class="grid--one grid--sm-third">
 				<section class="section--about-map margin--bot-2">
@@ -34,6 +35,13 @@
 					</div>
 				{% endfor %}
 			</aside>
+			<div class="aboutgallery grid--one">
+				{% for image in about.gallery %}
+					
+						<img src="{{image|resize(600,600)}}" alt="">
+					
+				{% endfor %}
+			</div>
 		</section>
 	</article>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiHGcSRZk_4-FWu6v5umuRisatRjBHtTc"></script>

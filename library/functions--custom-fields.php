@@ -95,8 +95,8 @@ function prepareHeaderFields()
 {
 
     $imageOneId = get_field('field_5a8c67b1c743c');
-    
-    $imageOne   = null;
+
+    $imageOne = null;
     if (!empty($imageOneId)) {
         $imageOne = new TimberImage($imageOneId);
     }
@@ -148,9 +148,20 @@ function prepareAboutFields()
             );
         }
     }
+
+    $aboutGallery = get_field('field_5b24437acd759');
+
+    if (!empty($aboutGallery)) {
+        foreach ($aboutGallery as $image) {
+            $gallery[] = new TimberImage($image['id']);
+        }
+    } else {
+        $gallery = null;
+    }
     $about = array(
-        'map'   => $map,
-        'stats' => $stat,
+        'map'     => $map,
+        'stats'   => $stat,
+        'gallery' => $gallery,
     );
 
     return $about;

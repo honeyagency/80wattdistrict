@@ -44,6 +44,17 @@ jQuery(document).ready(function($) {
                 $child.addClass('open');
             }
         });
+        if ($('.aboutgallery').length > 0) {
+        $('.aboutgallery').flickity({
+            // options
+            cellSelector: 'img',
+            // cellAlign: 'left',
+            // setGallerySize: false,
+            prevNextButtons: false,
+            wrapAround: true,
+            pageDots: true
+        });
+    }
     if (mob == true) {} else {
         $search = $('.toggle-search');
         $search.on('click touchstart', function(event) {
