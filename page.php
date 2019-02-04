@@ -23,9 +23,10 @@
 
 $context = Timber::get_context();
 $post    = new TimberPost();
-
+$context['agenda'] = getCustomPosts('post', 1, null, 'date', null, null, null);
 if (is_front_page() == true) {
     $context['home'] = prepareHomepageFields();
+
 } else {
     $context['header'] = prepareHeaderFields();
     if (is_page(7)) {
