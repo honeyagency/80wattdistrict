@@ -41,7 +41,7 @@ class StarterSite extends TimberSite
         $context['site']    = $this;
         $context['options'] = prepareSiteOptions();
         $context['assets']  = get_template_directory_uri() . '/app';
-        $context['agenda'] = getCustomPosts('post', 1, null, 'date', null, null, null);
+        $context['agenda']  = getCustomPosts('post', 1, 2, 'date', null, null);
         return $context;
     }
 

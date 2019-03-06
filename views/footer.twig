@@ -1,5 +1,5 @@
 <footer class="section--footer flex flex--wrap justify--between spacing--gutter spacing--vert-2">
-	<div class="grid--one grid--sm-third">{% if options.footer.schedule %}<a href="{{options.footer.schedule.url}}" title="{{options.footer.schedule.title}}" target="{{options.footer.schedule.target}}" class="color--black text--uppercase font--large font--cholla">{{options.footer.schedule.title}}</a>{% endif %}<br><a href="{{agenda.permalink}}" title="{{agenda.title}}" class=" text--left color--black font--small">View Most Recent Agenda</a></div>
+	<div class="grid--one grid--sm-third">{% if options.footer.schedule %}<a href="{{options.footer.schedule.url}}" title="{{options.footer.schedule.title}}" target="{{options.footer.schedule.target}}" class="color--black text--uppercase font--large font--cholla">{{options.footer.schedule.title}}</a>{% endif %}<br><a href="{{agenda.link}}" title="{{agenda.title}}" class=" text--left color--black font--small">View Most Recent Agenda</a></div>
 	<div class="grid--one grid--sm-third">
 		{% for link in options.footer.links %}
 			<a href="{{link.url}}" title="{{link.title}}" target="{{link.target}}" class="color--black block">{{link.title}}</a>
